@@ -34,7 +34,7 @@ We will update the code of this part after the final decision.
 
 ### Statistics of VAT (References)
 
-| Benchmark | Translation Direction | # Sentence | # Words | # Distinct Words |
+| Benchmark | Translation Direction | # Sentences | # Words | # Distinct Words |
 | :-------: | :-------------------: | :--------: | :-----: | :--------------: |
 |   wmt20   |         km-en         |    928     |  17170  |       3645       |
 |   wmt20   |         cs-en         |    266     |  12568  |       3502       |
