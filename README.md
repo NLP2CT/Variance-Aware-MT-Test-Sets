@@ -52,7 +52,7 @@ Note: the minimal version is for reproducing the results
 		--scores-dir ${WMT_DATA_PATH}/results/system-level/scores_ALL \
 		--testset-name newstest2020 --score-dump wmt20-bertscore.csv
 	```
-	(Alternative Option) You can your implementation for dumping the scores given by the metrics. But the CSV header should contain:
+	(Alternative Option) You can use your implementation for dumping the scores given by the metrics. But the CSV header should contain:
 	```csv
 	,TESTSET,LP,ID,METRIC,SYS,SCORE
 	```
