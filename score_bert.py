@@ -172,8 +172,4 @@ def main():
 
 
 if __name__ == "__main__":
-    '''
-    export WMT_DATA_PATH=/home/zhanrunzhe/workspace/diffculty-eval-nmt/test_data/wmt2020
-    CUDA_VISIBLE_DEVICES=1 python score_bert.py  -b 128 -s -r dummy -c dummy --rescale_with_baseline --hypos-dir ${WMT_DATA_PATH}/system-outputs --refs-dir ${WMT_DATA_PATH}/references --scores-dir ${WMT_DATA_PATH}/results/system-level/scores_ALL --testset-name newstest2020 --score-dump wmt20-bertscore.csv
-    '''
     main()

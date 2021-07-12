@@ -97,7 +97,4 @@ def main():
     eval_res.to_csv(args.score_dump)
 
 if __name__ == '__main__':
-    '''
-    CUDA_VISIBLE_DEVICES=1 python score_comet.py --src-dir ${WMT_DATA_PATH}/sources --hypos-dir ${WMT_DATA_PATH}/system-outputs --refs-dir ${WMT_DATA_PATH}/references --scores-dir ${WMT_DATA_PATH}/results/system-level/scores_ALL --testset-name newstest2020 --score-dump wmt20-comet.csv
-    '''
     main()

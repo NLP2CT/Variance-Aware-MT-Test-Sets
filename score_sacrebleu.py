@@ -64,7 +64,4 @@ def main():
 
 
 if __name__ == '__main__':
-    '''
-    python score_sacrebleu.py --metric bleu chrf --test-set wmt2020 --save-path sents_score --tokenize intl --hypos-dir ${WMT_DATA_PATH}/system-outputs --scores-dir ${WMT_DATA_PATH}/results/system-level/scores_ALL
-    '''
     main()
