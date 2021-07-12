@@ -30,8 +30,38 @@ We also provide the meta-inforamtion of reserved data. Each json file contains t
 ```
 
 ### Reproduce & Create VAT
-We will update the code of this part after the final decision.
+The reported results in the paper were produced by single NVIDIA GeForce 1080Ti card.
 
+#### Requirements
+* [sacreBLEU](https://github.com/mjpost/sacrebleu) version >= 1.4.14
+* [BLEURT](https://github.com/google-research/bleurt) version >= 0.0.2
+* [COMET](https://github.com/Unbabel/COMET) version >= 0.1.0
+* [BERTScore](https://github.com/Tiiiger/bert_score) version >= 0.3.7 (hug_trans==4.2.1)
+* [PyTorch](http://pytorch.org/) version >= 1.5.1
+* Python version >= 3.8
+* CUDA & cudatoolkit >= 10.1
+
+Note: the minimal version is for reproducing the results
+
+#### Pipeline
+1. Use `score_xxx.py` to generate the CSV files that stores the sentence-level scores evaluated by the corresponding metrics. For example, evaluating all the WMT20 submissions of all the language pairs using BERTScore:
+	```shell
+	CUDA_VISIBLE_DEVICES=0 python score_bert.py -b 128 -s -r dummy -c dummy --rescale_with_baseline \
+		--hypos-dir ${WMT_DATA_PATH}/system-outputs \
+		--refs-dir ${WMT_DATA_PATH}/references \
+		--scores-dir ${WMT_DATA_PATH}/results/system-level/scores_ALL \
+		--testset-name newstest2020 --score-dump wmt20-bertscore.csv
+	```
+	(Alternative Option) You can your implementation for dumping the scores given by the metrics. But the CSV header should contain:
+	```csv
+	,TESTSET,LP,ID,METRIC,SYS,SCORE
+	```
+2. Use `cal_filtering.py` to filter the test set based on the score warehouse calculated in the last step. For example, 
+	```shell
+	python cal_filtering.py --score-dump wmt20-bertscore.csv --output VAT_meta/wmt20-test/ --filter-per 60
+	```
+	It will produce the json files which contain the ID of reserved sentences.
+ 
 ### Statistics of VAT (References)
 
 | Benchmark | Translation Direction | # Sentences | # Words | # Distinct Words |
