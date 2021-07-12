@@ -32,6 +32,8 @@ We also provide the meta-inforamtion of reserved data. Each json file contains t
 ### Reproduce & Create VAT
 The reported results in the paper were produced by single NVIDIA GeForce 1080Ti card.
 
+We will keep updating the code and related documentation after the response.
+
 #### Requirements
 * [sacreBLEU](https://github.com/mjpost/sacrebleu) version >= 1.4.14
 * [BLEURT](https://github.com/google-research/bleurt) version >= 0.0.2
