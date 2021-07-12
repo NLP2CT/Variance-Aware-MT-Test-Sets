@@ -60,7 +60,7 @@ Note: the minimal version is for reproducing the results
 	```shell
 	python cal_filtering.py --score-dump wmt20-bertscore.csv --output VAT_meta/wmt20-test/ --filter-per 60
 	```
-	It will produce the json files which contain the ID of reserved sentences.
+	It will produce the json files which contain the IDs of reserved sentences.
  
 ### Statistics of VAT (References)
 
