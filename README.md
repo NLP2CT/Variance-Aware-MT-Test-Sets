@@ -66,7 +66,7 @@ Note: the minimal version is for reproducing the results
  
 ### Statistics of VAT (References)
 
-| Benchmark | Translation Direction | # Sentences | # Words | # Distinct Words |
+| Benchmark | Translation Direction | # Sentences | # Words | # Vocabulary |
 | :-------: | :-------------------: | :--------: | :-----: | :--------------: |
 |   wmt20   |         km-en         |    928     |  17170  |       3645       |
 |   wmt20   |         cs-en         |    266     |  12568  |       3502       |
