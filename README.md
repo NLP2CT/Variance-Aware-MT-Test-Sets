@@ -1,6 +1,8 @@
 # Variance-Aware-MT-Test-Sets
 Variance-Aware Machine Translation Test Sets
 
+**Update**: If you are looking for the huggingface ``Datasets`` version of these test sets, Gabriele Sarti has created a repository [here](https://huggingface.co/datasets/gsarti/wmt_vat). 
+
 ### License
 See `LICENSE`. We follow the data licensing plan as the same as the WMT benchmark. 
 
